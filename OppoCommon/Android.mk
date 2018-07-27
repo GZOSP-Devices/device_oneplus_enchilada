@@ -16,8 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-LOCAL_PACKAGE_NAME := OppoCommon
-
 ifneq ($(filter oppo oneplus,$(BOARD_VENDOR)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))

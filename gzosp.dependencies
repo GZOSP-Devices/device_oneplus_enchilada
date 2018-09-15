@@ -1,0 +1,17 @@
+[
+  {
+    "repository":  "GZOSP-Devices/device_oneplus_sdm845-common",
+    "target_path": "device/oneplus/sdm845-common",
+    "branch":      "9.0"
+  },
+  {
+    "repository":  "GZR-Kernels/kernel_oneplus_sdm845",
+    "target_path": "kernel/oneplus/sdm845",
+    "branch":      "9.0"
+  },
+  {
+    "repository":  "BigTopKrazies/proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch":      "9.0-treble"
+  }
+]

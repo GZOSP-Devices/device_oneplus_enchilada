@@ -13,5 +13,10 @@
     "repository":  "BigTopKrazies/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
     "branch":      "9.0-treble"
+  },
+    {
+    "repository":  "GZOSP-Devices/device_generic_goldfish",
+    "target_path": "device/generic/goldfish",
+    "branch":      "9.0"
   }
 ]

@@ -22,25 +22,19 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# Inherit some common GZOSP stuff.
+$(call inherit-product, vendor/gzosp/config/common_full_phone.mk)
 
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/oneplus/oneplus6/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+DEVICE_PACKAGE_OVERLAYS += device/oneplus/enchilada/overlay
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oneplus/oneplus6/device.mk)
+# Inherit from enchilada device
+$(call inherit-product, device/oneplus/enchilada/device.mk)
 
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -48,8 +42,8 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_oneplus6
-PRODUCT_DEVICE := oneplus6
+PRODUCT_NAME := gzosp_oneplus6
+PRODUCT_DEVICE := enchilada
 PRODUCT_BRAND := OnePlus
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := ONEPLUS A6003
@@ -62,5 +56,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 TARGET_VENDOR := oneplus
 
-#PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model

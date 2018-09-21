@@ -18,7 +18,7 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-BOARD_PATH := device/oneplus/oneplus6
+BOARD_PATH := device/oneplus/enchilada
 
 PRODUCT_FULL_TREBLE := true
 BOARD_VNDK_VERSION := current

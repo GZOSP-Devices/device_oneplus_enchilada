@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := gzosp_oneplus6
+PRODUCT_NAME := gzosp_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_BRAND := OnePlus
 PRODUCT_MANUFACTURER := OnePlus

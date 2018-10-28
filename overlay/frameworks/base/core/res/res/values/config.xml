@@ -119,4 +119,7 @@
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">80px</dimen>
     <dimen name="status_bar_height_landscape">80px</dimen>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>

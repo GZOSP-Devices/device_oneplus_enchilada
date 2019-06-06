@@ -24,6 +24,12 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Kernel
 TARGET_KERNEL_CONFIG := toxic_enchilada_defconfig
+# Clang
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := 9.0.3
+KBUILD_COMPILER_STRING := Android (5484270 based on r353983c) clang version 9.0.3
+export KBUILD_COMPILER_STRING
+TARGET_KERNEL_HEADER_ARCH := arm64
 
 # inherit from the proprietary version
 -include vendor/oneplus/enchilada/BoardConfigVendor.mk
